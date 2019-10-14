@@ -1,6 +1,5 @@
 'use strict';
 
-import '@babel/polyfill';
 import { createShader, createProgram } from './util';
 
 const getProgram = function(gl, vertexId, fragmentId) {

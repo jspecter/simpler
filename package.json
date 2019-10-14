@@ -2,18 +2,21 @@
     "name": "simpler",
     "version": "1.0.0",
     "description": "simple syntax sugar for webgl",
-    "main": "index.js",
+    "main": "index.ts",
     "scripts": {
         "build": "webpack --progress -w",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
-        "js",
         "ts",
         "webgl",
         "simpler"
     ],
     "author": "Leslie Zhu",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:jspecter/simpler.git"
+    },
     "license": "MIT",
     "devDependencies": {
         "@babel/core": "^7.6.4",
@@ -22,8 +25,8 @@
         "clean-webpack-plugin": "^3.0.0",
         "prettier": "^1.18.2",
         "terser-webpack-plugin": "^2.1.3",
+        "ts-lint": "^4.5.1",
         "ts-loader": "^6.2.0",
-        "tslint": "^5.20.0",
         "tslint-loader": "^3.6.0",
         "typescript": "^3.6.4",
         "webpack": "^4.41.1",
