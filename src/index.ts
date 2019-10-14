@@ -4,8 +4,8 @@ import '@babel/polyfill';
 import { createShader, createProgram } from './util';
 
 const getProgram = function(gl, vertexId, fragmentId) {
-    const vertexSource = document.querySelector(`#${vertexId}`).innerText;
-    const fragmentSource = document.querySelector(`#${fragmentId}`).innerText;
+    const vertexSource = document.querySelector(`#${vertexId}`).textContent;
+    const fragmentSource = document.querySelector(`#${fragmentId}`).textContent;
 
     const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexSource);
     const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentSource);

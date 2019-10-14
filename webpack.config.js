@@ -16,21 +16,24 @@ module.exports = {
     module: {
         rules: [
             {
-                test: '/.ts?$/',
+                test: /.ts?$/,
                 enforce: 'pre',
                 use: 'tslint-loader',
+                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/
             },
 
             {
-                test: '/.js?$/',
+                test: /\.tsx?$/,
                 use: 'babel-loader',
+                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/
             },
 
             {
-                test: '/.ts?$/',
+                test: /\.tsx?$/,
                 use: 'ts-loader',
+                include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/
             }
         ]
