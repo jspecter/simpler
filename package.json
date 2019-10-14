@@ -1,5 +1,5 @@
 {
-    "name": "simpler",
+    "name": "simplerjs",
     "version": "1.0.0",
     "description": "simple syntax sugar for webgl",
     "main": "index.js",
