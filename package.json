@@ -4,6 +4,7 @@
     "description": "simple syntax sugar for webgl",
     "main": "index.js",
     "scripts": {
+        "build": "webpack --progress -w",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
@@ -13,5 +14,22 @@
         "simpler"
     ],
     "author": "Leslie Zhu",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "prettier": "^1.18.2",
+        "terser-webpack-plugin": "^2.1.3",
+        "ts-lint": "^4.5.1",
+        "ts-loader": "^6.2.0",
+        "tslint-loader": "^3.6.0",
+        "typescript": "^3.6.4",
+        "webpack": "^4.41.1",
+        "webpack-cli": "^3.3.9"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.6.0"
+    }
 }
