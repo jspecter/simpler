@@ -2,7 +2,7 @@
     "name": "simpler",
     "version": "1.0.0",
     "description": "simple syntax sugar for webgl",
-    "main": "index.ts",
+    "main": "index.js",
     "scripts": {
         "build": "webpack --progress -w",
         "test": "echo \"Error: no test specified\" && exit 1"
