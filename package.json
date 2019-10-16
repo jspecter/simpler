@@ -2,7 +2,12 @@
     "name": "simplerjs",
     "version": "1.0.0",
     "description": "simple syntax sugar for webgl",
-    "main": "index.js",
+    "main": "simpler.min.js",
+    "types": "index.d.ts",
+    "module": "simpler.min.js",
+    "files": [
+        "dist/"
+    ],
     "scripts": {
         "build": "webpack --progress -w",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +15,7 @@
     "keywords": [
         "ts",
         "webgl",
-        "simpler"
+        "simplerjs"
     ],
     "author": "Leslie Zhu",
     "repository": {

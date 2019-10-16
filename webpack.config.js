@@ -5,11 +5,12 @@ const terserWebpackPlugin = require('terser-webpack-plugin');
 module.exports = {
     entry: './src/index.ts',
     output: {
-        filename: '[name].bundle.js',
-        path: path.join(__dirname, 'build')
+        filename: 'simpler.min.js',
+        path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'umd'
     },
     mode: 'production',
-    devtool: 'source-map',
+    //   devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.ts', '.json']
     },
@@ -22,18 +23,15 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules/
             },
-
-            {
-                test: /\.tsx?$/,
-                use: 'babel-loader',
-                include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules/
-            },
-
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/
+            },
+            {
+                test: /\.jsx$/,
+                use: 'babel-loader',
                 exclude: /node_modules/
             }
         ]
