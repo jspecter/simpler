@@ -1,6 +1,6 @@
 {
     "name": "simplerjs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "simple syntax sugar for webgl",
     "main": "simpler.min.js",
     "types": "index.d.ts",
