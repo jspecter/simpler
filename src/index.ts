@@ -22,4 +22,4 @@ const getProgram = function(gl, vertexId, fragmentId) {
     return program;
 };
 
-export default getProgram;
+export { getProgram };
