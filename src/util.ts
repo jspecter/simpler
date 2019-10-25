@@ -11,7 +11,7 @@ export function createShader(gl, type: string, source: string): object {
     }
 
     gl.deleteShader(shader);
-    throw new Error(this.getShaderLogInfo());
+    throw new Error(gl.getShaderInfoLog());
 }
 
 export function createProgram(
@@ -26,11 +26,11 @@ export function createProgram(
 
     gl.linkProgram(program);
 
-    let success: boolean = this.getProgramParameter(program, gl.LINK_STATUS);
+    let success: boolean = gl.getProgramParameter(program, gl.LINK_STATUS);
     if (success) {
         return program;
     }
 
     gl.deleteProgram(program);
-    throw new Error(this.getProgramLogInfo());
+    throw new Error(gl.getProgramInfoLog());
 }

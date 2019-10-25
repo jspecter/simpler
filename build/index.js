@@ -7,3 +7,4 @@ const options = config('simpler', 'esm');
     const bundle = await rollup.rollup(options.input);
     await bundle.write(options.output);
 })();
+
