@@ -10,8 +10,12 @@ export function createShader(gl, type: string, source: string): object {
         return shader;
     }
 
+    let errMsg:string = gl.getShaderInfoLog(shader);
+    
+    if(errMsg){
+        throw errMsg;
+    }
     gl.deleteShader(shader);
-    throw new Error(gl.getShaderInfoLog());
 }
 
 export function createProgram(
@@ -31,6 +35,11 @@ export function createProgram(
         return program;
     }
 
+    let errMsg:string = gl.getProgramInfoLog(program);
+    
+    if(errMsg){
+        throw errMsg;
+    }
+
     gl.deleteProgram(program);
-    throw new Error(gl.getProgramInfoLog());
 }
